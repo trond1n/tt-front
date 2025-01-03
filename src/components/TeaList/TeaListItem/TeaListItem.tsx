@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import classes from "./TeaListItem.module.css";
+import blank from "../../../assets/images/blank.png";
 interface TeaListItemProps {
   isActive?: boolean;
   tea: {
@@ -11,11 +13,12 @@ interface TeaListItemProps {
 }
 
 const TeaListItem = ({ isActive = false, tea }: TeaListItemProps) => {
-  const { name, time, minTemp, maxTemp } = tea;
+  const { id, name, time, minTemp, maxTemp } = tea;
   return (
+    <Link to={`/tea/${id}`}>
     <div className={`${classes.container} ${isActive ? classes.active : ""}`}>
       <img
-        src="blank.png"
+        src={blank}
         alt="tea pic"
         className={classes.image}
         width={64}
@@ -29,6 +32,7 @@ const TeaListItem = ({ isActive = false, tea }: TeaListItemProps) => {
         </div>
       </div>
     </div>
+    </Link>
   );
 };
 

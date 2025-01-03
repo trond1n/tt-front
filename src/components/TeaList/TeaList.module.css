@@ -1,6 +1,5 @@
 .container {
   background: var(--Color-bg-primary-desktop, #f5f5f6);
-  max-width: 426px;
 }
 .header {
   display: flex;

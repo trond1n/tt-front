@@ -1,0 +1,149 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 77px;
+}
+
+.time {
+  display: flex;
+  gap: 40px;
+  color: #fff;
+}
+
+.circle {
+  position: relative;
+  width: 258px;
+  height: 258px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle svg {
+  position: relative;
+  width: 258px;
+  height: 258px;
+  transform: rotate(-90deg);
+}
+
+.circle svg circle {
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke: #e4e4e7;
+  stroke-width: 1px;
+  transform: translate(5px, 5px);
+}
+
+.secondsCircle {
+  stroke: #ceeab0;
+  stroke-width: 1px;
+  stroke-dasharray: 440;
+  transition: stroke-dashoffset 1s linear;
+}
+
+.dots {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  transition: transform 1s linear;
+}
+
+.dots::before {
+  content: "";
+  position: absolute;
+  /* top: -3px; */
+  width: 12px;
+  height: 12px;
+  background: #ceeab0;
+  border-radius: 50%;
+}
+
+.seconds {
+  position: absolute;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 140%; /* 70px */
+  letter-spacing: 0.41px;
+  border-radius: 50%;
+  height: 180px;
+  width: 180px;
+  color: #2b4212;
+  background-color: #f5fbee;
+
+  display: flex; /* Используем flexbox */
+  justify-content: center; /* Горизонтальное центрирование */
+  align-items: center; /* Вертикальное центрирование */
+
+  color: var(--Color-text-brand, #2b4212);
+  font-family: "Source Sans 3";
+  font-style: normal;
+}
+
+.controls {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.regulators {
+  display: flex;
+  gap: 12px;
+}
+.regulators .button {
+  padding: 16px;
+  border: 1px solid #e4e4e7;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 140%; /* 28px */
+  letter-spacing: 0.41px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  font-family: "Source Sans 3";
+  color: var(--Color-text-secondary, #3f3f46);
+
+
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 28px */
+  letter-spacing: 0.41px;
+}
+
+.regulators .button:hover {
+  background-color: #f5f5f6;
+}
+.plus {
+  border-radius: 12px 20px 20px 12px;
+}
+.minus {
+  border-radius: 20px 12px 12px 20px;
+}
+
+.handlerButton {
+  margin-top: 60px;
+  width: 394px;
+  height: 58px;
+  padding: 16px;
+  border-radius: 20px;
+  background-color: #119822;
+  color: #fff;
+  font-family: "Source Sans 3";
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 140%; /* 28px */
+letter-spacing: 0.41px;
+}
+.handlerButton:hover {
+  background-color: #0e891e;
+}
