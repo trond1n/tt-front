@@ -1,27 +1,22 @@
 .container {
-  width: 1280px;
+  background: var(--Color-bg-primary-desktop, #f5f5f6);
+  max-width: 426px;
+}
+.header {
   display: flex;
+  padding: 16px 32px;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 32px;
+  border-right: 1px solid var(--Color-border-primary-desktop, #e4e4e7);
   border-bottom: 1px solid var(--Color-border-primary-desktop, #e4e4e7);
+  background-color: #fff;
 }
-.logo h1 {
-  margin: 0;
+.header h2 {
   color: var(--Color-text-primary, #18181b);
   font-family: "Source Serif 4";
   font-size: 26px;
   font-style: normal;
   font-weight: 600;
-  line-height: 120%;
-}
-.links {
-  margin: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 33px;
-}
-.links li {
-  list-style: none;
+  line-height: 120%; /* 31.2px */
+  letter-spacing: 0.41px;
 }

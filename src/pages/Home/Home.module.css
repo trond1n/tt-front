@@ -1,0 +1,20 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 1280px;
+}
+.choose {
+display: flex;
+align-items: center;
+flex-direction: column;
+align-items: center;
+  border-right: 1px solid var(--Color-border-primary-desktop, #e4e4e7);
+  height: 100vh;
+  width: 100%;
+
+}
+.choose h2 {
+  margin: auto;
+  color: var(--Color-text-third, #94969c);
+  font-family: "Source Sans 3";
+}

@@ -1,4 +1,4 @@
-import HeaderLink from "../UI/HeaderLink/HeaderLink";
+import HeaderLink from "../UI/HeaderLink/LinkButton";
 import classes from "./Header.module.css";
 
 const Header = ({ isAuth = false }: { isAuth?: boolean } = {}) => {
@@ -7,16 +7,16 @@ const Header = ({ isAuth = false }: { isAuth?: boolean } = {}) => {
       <div className={classes.logo}>
         <h1>Tea Timer</h1>
       </div>
-      {isAuth ? (
+      {!isAuth ? (
         <div className={classes.links}>
           <HeaderLink name="История" path="/history" />
           <HeaderLink name="Выйти" path="/logout" />
         </div>
       ) : (
-        <div className={classes.links}>
+        <ul className={classes.links}>
           <HeaderLink name="Зарегистрироваться" path="/signup" />
           <HeaderLink name="Войти" path="/login" />
-        </div>
+        </ul>
       )}
     </header>
   );

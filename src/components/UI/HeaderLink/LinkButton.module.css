@@ -1,0 +1,16 @@
+.link {
+  color: var(--Color-btn-primary, #119822);
+  text-align: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  /* Btn */
+  font-family: "Source Sans 3";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 28px */
+  letter-spacing: 0.41px;
+  text-decoration: none;
+}

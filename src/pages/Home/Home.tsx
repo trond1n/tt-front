@@ -1,9 +1,22 @@
-import React from 'react'
+import TeaList from "../../components/TeaList/TeaList";
+import classes from "./Home.module.css";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <div className={classes.container}>
+      <TeaList />
 
-export default Home
+      <div
+        className={classes.choose}
+      >
+        <h2>Выберите чай
+          <br />чтобы начать</h2>
+      </div>
+      <div>
+
+      </div>
+    </div>
+  );
+};
+
+export default Home;
