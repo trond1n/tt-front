@@ -39,9 +39,8 @@
 }
 
 .secondsCircle {
-  stroke: #ceeab0;
-  stroke-width: 1px;
-  stroke-dasharray: 440;
+  stroke-width: 10px;
+  stroke-dasharray: 780;
   transition: stroke-dashoffset 1s linear;
 }
 
@@ -58,10 +57,9 @@
 .dots::before {
   content: "";
   position: absolute;
-  /* top: -3px; */
   width: 12px;
   height: 12px;
-  background: #ceeab0;
+  background: var(--color);
   border-radius: 50%;
 }
 
@@ -77,14 +75,11 @@
   width: 180px;
   color: #2b4212;
   background-color: #f5fbee;
-
   display: flex; /* Используем flexbox */
   justify-content: center; /* Горизонтальное центрирование */
   align-items: center; /* Вертикальное центрирование */
-
   color: var(--Color-text-brand, #2b4212);
   font-family: "Source Sans 3";
-  font-style: normal;
 }
 
 .controls {
@@ -110,8 +105,6 @@
   text-decoration-skip-ink: none;
   font-family: "Source Sans 3";
   color: var(--Color-text-secondary, #3f3f46);
-
-
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
@@ -135,15 +128,15 @@
   height: 58px;
   padding: 16px;
   border-radius: 20px;
-  background-color: #119822;
+  background-color: var(--Color-btn-primary, #119822);
   color: #fff;
   font-family: "Source Sans 3";
-font-size: 20px;
-font-style: normal;
-font-weight: 600;
-line-height: 140%; /* 28px */
-letter-spacing: 0.41px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 28px */
+  letter-spacing: 0.41px;
 }
 .handlerButton:hover {
-  background-color: #0e891e;
+  background-color: var(--Color-btn-primary-hover, #0E891E);
 }

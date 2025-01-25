@@ -10,6 +10,10 @@
   /* colors */
   --Color-text-primary: #18181b;
   --Color-btn-primary: #119822;
+  --Color-btn-primary-hover: #0E891E;
+  --Color-border-brand: #CEEAB0;
+  --Color-bg-end-timer: #FEF6EE;
+  --Color-text-end-timer: #B93815;
   --Color-border-primary-desktop: #e4e4e7;
   --Color-bg-primary-desktop: #f5f5f6;
   --Color-text-third: #94969c;

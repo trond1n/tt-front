@@ -1,5 +1,6 @@
 // import { useParams } from "react-router-dom";
 import About from "../About/About";
+import Infusions from "../Infusions/Infusions";
 import TeaList from "../TeaList/TeaList";
 import TimerBlock from "../TimerBlock/TimerBlock";
 import classes from "./Tea.module.css";
@@ -9,7 +10,8 @@ const Tea = () => {
   return <div className={classes.container}>
 <TeaList/>
 <TimerBlock/>
-<About/>
+{/* <About/> */}
+<Infusions/>
   </div>;
 };
 

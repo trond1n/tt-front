@@ -1,13 +1,16 @@
+import Login from "../Login/Login";
+import Registration from "../Registranion/Registration";
 import HeaderLink from "../UI/HeaderLink/LinkButton";
 import classes from "./Header.module.css";
 
 const Header = ({ isAuth = false }: { isAuth?: boolean } = {}) => {
   return (
+    <>
     <header className={classes.container}>
       <div className={classes.logo}>
         <h1>Tea Timer</h1>
       </div>
-      {!isAuth ? (
+      {isAuth ? (
         <div className={classes.links}>
           <HeaderLink name="История" path="/history" />
           <HeaderLink name="Выйти" path="/logout" />
@@ -19,6 +22,9 @@ const Header = ({ isAuth = false }: { isAuth?: boolean } = {}) => {
         </ul>
       )}
     </header>
+    {/* <Login/> */}
+    <Registration/>
+    </>
   );
 };
 
