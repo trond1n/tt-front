@@ -2,6 +2,8 @@ import classes from "./TeaList.module.css";
 import TeaListItem from "./TeaListItem/TeaListItem";
 import { useParams } from "react-router-dom";
 import plus from "../../assets/svg/plus_green.svg";
+import { useState } from "react";
+import AddTea from "../AddTea/AddTea";
 const teas = [
   {
     id: 1,
@@ -13,8 +15,8 @@ const teas = [
   {
     id: 2,
     name: "Чёрный",
-    time: 3,
-    minTemp: 70,
+    time: 5,
+    minTemp: 10,
     maxTemp: 80,
   },
   {
@@ -42,11 +44,17 @@ const teas = [
 
 const TeaList = () => {
   const { id } = useParams<{ id: string }>(); // Получаем параметр id из URL
+  const [isAddPopupVisible, setIsAddPopupVisible] = useState<boolean>(false);
+
+  const toggleAddPopup = () => setIsAddPopupVisible(!isAddPopupVisible);
+
   return (
     <div className={classes.container}>
       <div className={classes.header}>
         <h2>Таймеры</h2>
-        <img src={plus} alt="plus" />
+        <button className={classes.addButton} onClick={toggleAddPopup}>
+          <img src={plus} alt="plus" />
+        </button>
       </div>
       <div className={classes.list}>
         {teas.map((tea) => (
@@ -57,6 +65,7 @@ const TeaList = () => {
           />
         ))}
       </div>
+      {isAddPopupVisible && <AddTea onClose={toggleAddPopup} />}
     </div>
   );
 };
